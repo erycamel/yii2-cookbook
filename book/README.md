@@ -22,7 +22,7 @@ Logging and error handling
 Web essentials
 --------------
 
-- [URLs with varialbe number of parameters](urls-variable-number-of-parameters.md)
+- [URLs with variable number of parameters](urls-variable-number-of-parameters.md)
 - [Outputting JSON and XML](response-formats.md)
 - Using Google fonts as assets
 - [Managing cookies](cookies.md)
@@ -30,31 +30,45 @@ Web essentials
 - AJAX???
 - [Handling incoming third party POST requests](incoming-post.md)
 
+SEO essentials
+--------------
+
+- [Enable pretty URLs](enable-pretty-urls.md)
+- [Pagination with pretty URLs](pagination-pretty-urls.md)
+- [Adding SEO tags](adding-seo-tags.md)
+- [Canonical URLs](canonical-urls.md)
+- [Using redirects](using-redirects.md)
+- [Using slugs](using-slugs.md)
+- [Handling trailing slash in URLs](handling-trailing-slash-in-urls.md)
+
 Forms
 -----
 
 - [Using and customizing captcha](forms-captcha.md)
+- [Working with ActiveForm via JavaScript](forms-activeform-js.md)
 
 Security
 --------
 
 - A safe approach to passwords explained
-- SQL injection
-- XSS
-- RBAC
-- CSRF
+- [SQL injection](sql-injection.md)
+- [XSS](xss.md)
+- [RBAC](security-rbac.md)
+- [CSRF](csrf.md)
 
 Structuring and organizing code
 -------------------------------
 
 - [Backend and frontend via modules](structure-backend-frontend-modules.md)
 - [Asset processing with Grunt](structure-asset-processing-with-grunt.md)
-
+- Asset processing with Gulp
+- [Using global functions](structure-global-functions.md)
+- [Processing text](processing-text.md)
 
 View
 ----
 
-- Reusing views via partials
+- [Reusing views via partials](reusing-views-via-partials.md)
 - Using blocks
 - Using decorators
 - When to use Widgets and when not to
@@ -77,7 +91,7 @@ i18n
 
 - General best practices
 - [Selecting application language](i18n-selecting-application-language.md)
-- Translating content
+- [Using IDs as translation source](i18n-using-ids-as-translation-source.md)
 
 
 Performance
@@ -87,6 +101,8 @@ Performance
 - Speeding up sessions
 - Implementing backgroud tasks (cronjobs)
 - [Running Yii on HHVM](performance-hhvm.md)
+- [Caching](caching.md)
+- [Configuring a Yii2 Application for an Autoscaling Stack](scaling.md)
 
 External code
 -------------
@@ -99,3 +115,4 @@ Tools
 
 - Making your life easier (XDebug, debug toolbar, gii)
 - [IDE autocompletion for custom components](ide-autocompletion.md)
+- [Using custom migration template](using-custom-migration-template.md)

@@ -36,6 +36,11 @@ In order to read a cookie use the following code:
 $value = \Yii::$app->getRequest()->getCookies()->getValue('my_cookie');
 ```
 
+Where to get and set cookies?
+-----------------------------
+
+Cookies are part of HTTP request so it's a good idea to do both in controller which responsibility is exactly dealing with request and response.
+
 Cookies for subdomains
 ----------------------
 
@@ -80,15 +85,47 @@ $config = [
                 'domain' => '.example.com',
             ],
         ],
+        'request' => [
+            'cookieValidationKey' => 'your_validation_key'
+        ],
+        'session' => [
+            'cookieParams' => [
+                'domain' => '.example.com',
+                'httpOnly' => true,
+            ],
+        ],
+
     ],
 ];
 ```
 
+Note that `cookieValidationKey` should be the same for all sub-domains.
+
+Note that you have to configure the `session::cookieParams` property to have the samedomain as your `user::identityCookie` to ensure the `login` and `logout` work for all subdomains. This behavior is better explained on the next section.
+
 Session cookie parameters
 -------------------------
 
-???
-TBD
+Session cookies parameters are important both if you have a need to maintain session while getting from one
+subdomain to another or when, in contrary, you host backend app under `/admin` URL and want handle session
+separately.
+
+```php
+$config = [
+    // ...
+    'components' => [
+        // ...
+        'session' => [
+            'name' => 'admin_session',
+            'cookieParams' => [
+                'httpOnly' => true,
+                'path' => '/admin',
+            ],
+        ],
+    ],
+];
+```
+
 
 See also
 --------

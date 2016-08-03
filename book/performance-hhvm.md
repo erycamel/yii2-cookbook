@@ -79,15 +79,14 @@ Test it first
 
 HHVM is more or less [tested to work with most frameworks out there](http://hhvm.com/frameworks/). Yii isn't exception.
 Except minor issues everything should work. Still, there are
-[many incompatibilities comared to PHP](https://github.com/facebook/hhvm/labels/php5%20incompatibility) so make sure to
+[many incompatibilities compared to PHP](https://github.com/facebook/hhvm/labels/php5%20incompatibility) so make sure to
 test application well before going live.
 
 Error reporting
 ---------------
 
 HHVM behavior about errors is different than PHP one so by default you're getting nothing but a blank white screen instead
-of an error. You won't get beatiful Yii errors when using HHVM but getting at least something is possible by adding the
-following to HHVM config:
+of an error. Add the following to HHVM config to fix it:
 
 ```
 hhvm.debug.server_error_message = true
